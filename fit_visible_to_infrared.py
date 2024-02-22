@@ -191,6 +191,8 @@ def main(args):
             # init_state = [x, y, w, h]
             init_state =  [769, 548, 92, 53]
 
+            # 可以用mediapipe来定位第一帧位置，人脸地标点参考https://developers.google.com/mediapipe/solutions/vision/face_landmarker/
+
             print('init_state =',init_state)
             trk = TrackerSiamFC(net_path=args.model)
             trk.init(img, init_state)
